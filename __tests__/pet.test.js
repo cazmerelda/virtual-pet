@@ -1,4 +1,5 @@
 const Pet = require('../src/pet');
+
 describe('constructor', () => {
     it ('returns an object', () => {
         expect(new Pet('Fido')).toBeInstanceOf(Object);
@@ -26,5 +27,22 @@ describe('growUp', () => {
         const pet = new Pet('Fido');
         pet.growUp();
         expect(pet.age).toEqual(1);
+    });
+});
+
+
+describe('growUp', () => {
+    it('increases hunger by 5' , () => {
+        const pet = new Pet('Fido');
+        pet.growUp();
+        expect(pet.hunger).toEqual(5);
+    });
+});
+
+describe('growUp', () => {
+    it('decreases fitness by 3' , () => {
+        const pet = new Pet('Fido');
+        pet.growUp();
+        expect(pet.fitness).toEqual(7);
     });
 });
