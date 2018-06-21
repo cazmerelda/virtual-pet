@@ -14,7 +14,13 @@ function Pet(name) {
         } else {
             this.fitness = MAXIMUM_FITNESS;
         }
-        
+    Pet.prototype.feed = function() {
+        if ((this.hunger - 3) <= 0) {
+            this.hunger -= 3;
+        } else {
+            this.hunger = 0;
+        }
+    }   
     }
     }
 }
