@@ -6,6 +6,7 @@ function Pet(name) {
     this.hunger = 0;
     this.fitness = MAXIMUM_FITNESS;
 
+    // this should be a method on the prototype
     this.growUp = function() {
         this.age += 1;
         this.hunger += 5;
@@ -38,6 +39,7 @@ Pet.prototype.feed = function() {
 }
 
 Pet.prototype.checkUp = function() {
+    // no line break after opening block of code
 
     if (this.fitness <=3 && this.hunger >= 5) {
         return 'I am hungry AND I need a walk';
