@@ -7,6 +7,7 @@ describe('constructor', () => {
 });
 
 describe('constructor', () => {
+    // remove any comments prior to committing
    // ...
     it('sets the name property', () => {
         const pet = new Pet('Fido');
@@ -30,7 +31,7 @@ describe('growUp', () => {
     });
 });
 
-
+// you don't need a describe for each method - the two `it` calls below can be in one describe
 describe('growUp', () => {
     it('increases hunger by 5' , () => {
         const pet = new Pet('Fido');
